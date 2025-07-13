@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Terminal, X, Minus, Square, User, Image } from 'lucide-react';
+import backgroundImage from '../assets/marek-piwnicki-unsplash.jpg';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -287,21 +288,40 @@ const Windows10Portfolio = () => {
   const [imageViewerSize, setImageViewerSize] = useState({ width: 600, height: 500 });
 
   const portfolioData = {
-    name: "John Doe",
-    title: "Full Stack Developer",
-    email: "john.doe@email.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    skills: ["React", "Node.js", "Python", "JavaScript", "TypeScript", "MongoDB", "PostgreSQL"],
+    name: "Manukrishna T.M",
+    title: "Junior AI/Backend Developer",
+    email: "t.m.manukrishna@gmail.com",
+    phone: "+91 (Contact for phone)",
+    location: "Kochi, Ernakulam, Kerala, India",
+    linkedin: "https://www.linkedin.com/in/manukrishna-t-m/",
+    skills: [
+      "React", "Vite", "Streamlit", "FastAPI", "Flask", "Node.js", 
+      "React Three Fiber", "TensorFlow", "PyTorch", "LangChain", 
+      "LangGraph", "Ollama", "Hugging Face", "OpenCV",
+      "Redis", "SQLite", "PostgreSQL", "ChromaDB", "FAISS",
+      "VS Code", "Cursor", "Blender 3D", "Jupyter Notebook"
+    ],
     experience: [
-      { company: "Tech Corp", role: "Senior Developer", duration: "2021-Present" },
-      { company: "StartupXYZ", role: "Full Stack Developer", duration: "2019-2021" },
-      { company: "WebDev Inc", role: "Junior Developer", duration: "2018-2019" },
+      { 
+        company: "Triangle Software Solutions", 
+        role: "Junior ML/AI Developer", 
+        duration: "June 2025 - Present",
+        location: "Kothamangalam, Kerala",
+        link: "https://trianglesoftwaresolutions.com/"
+      },
+      { 
+        company: "iDatalytics", 
+        role: "AI/Machine Learning and Data Science Intern", 
+        duration: "June 2023 - September 2023",
+        location: "Infopark, Kochi, Kerala",
+        link: "https://www.idatalytics.com/"
+      },
     ],
     projects: [
-      { name: "E-commerce Platform", tech: "React, Node.js, MongoDB" },
-      { name: "Task Management App", tech: "Vue.js, Express, PostgreSQL" },
-      { name: "Weather Dashboard", tech: "React, API Integration" },
+      { name: "AI/ML Projects", tech: "TensorFlow, PyTorch, LangChain, OpenCV" },
+      { name: "Web Applications", tech: "React, Vite, FastAPI, Flask" },
+      { name: "3D Visualization", tech: "React Three Fiber, Blender 3D" },
+      { name: "Data Science", tech: "Streamlit, Jupyter Notebook, PostgreSQL" },
     ],
   };
 
@@ -360,7 +380,8 @@ ${portfolioData.projects.map(project => `• ${project.name} - ${project.tech}`)
         response = `Contact Information:
 Email: ${portfolioData.email}
 Phone: ${portfolioData.phone}
-Location: ${portfolioData.location}`;
+Location: ${portfolioData.location}
+LinkedIn: ${portfolioData.linkedin}`;
         break;
       case 'clear':
         setTerminalContent([
@@ -399,8 +420,8 @@ Location: ${portfolioData.location}`;
 
   const DesktopIcon = ({ icon: Icon, label, onClick }) => (
     <div
-      className="flex flex-col items-center p-4 m-10 cursor-pointer hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors duration-200 shadow-md"
-      style={{ minWidth: 80 }}
+      className="flex flex-col items-center p-4 m-4 cursor-pointer hover:border-1 hover:border-transparent hover:bg-opacity-20 rounded-lg transition-colors duration-200"
+      style={{ minWidth: 100, padding:10 }}
       onClick={onClick}
       onDoubleClick={onClick}
     >
@@ -412,8 +433,13 @@ Location: ${portfolioData.location}`;
   );
 
   return (
-    <div className="h-screen w-screen bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-900 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+    <div className="h-screen w-screen relative overflow-hidden" style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
 
     {/* descktop icons */}
       <div className="absolute top-8 left-8 space-y-6 z-10 flex flex-col gap-5 items-start">
@@ -537,15 +563,37 @@ Location: ${portfolioData.location}`;
             onSizeChange={setImageViewerSize}
             className="z-20 p-0"
           >
-            <div className="bg-gray-800 p-10 h-full flex items-center justify-center overflow-auto rounded-b-lg">
-              <div className="bg-white rounded-lg p-10 shadow-xl max-w-md flex flex-col items-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-8 flex items-center justify-center shadow-lg">
-                  <User className="w-24 h-24 text-white" />
+            <div className="bg-gray-900 p-8 h-full flex items-center justify-center overflow-auto rounded-b-lg">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-sm flex flex-col items-center border border-white/20">
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/50 to-purple-500/50 animate-pulse"></div>
+                  <User className="w-16 h-16 text-white relative z-10" />
                 </div>
-                <div className="text-center">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2">{portfolioData.name}</h2>
-                  <p className="text-gray-600 mb-2">{portfolioData.title}</p>
-                  <p className="text-gray-500 text-sm">{portfolioData.location}</p>
+                <div className="text-center space-y-3">
+                  <h2 className="text-3xl font-bold text-gray-800 tracking-tight">{portfolioData.name}</h2>
+                  <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-full">
+                    {portfolioData.title}
+                  </div>
+                  <p className="text-gray-600 text-sm flex items-center justify-center gap-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    {portfolioData.location}
+                  </p>
+                  <div className="flex justify-center space-x-4 pt-4">
+                    <a 
+                      href={`mailto:${portfolioData.email}`}
+                      className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                    >
+                      {portfolioData.email}
+                    </a>
+                    <a 
+                      href={portfolioData.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-600 hover:text-purple-700 text-sm font-medium transition-colors"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

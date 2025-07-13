@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: "/emkay=portfolio"
+  base: "/emkay-portfolio"
 })

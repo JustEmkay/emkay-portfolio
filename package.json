@@ -1,7 +1,6 @@
 {
   "name": "my-portfolio",
   "homepage": "https://JustEmkay.github.io/emkay-portfolio/",
-  // "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

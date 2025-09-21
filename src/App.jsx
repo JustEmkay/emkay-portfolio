@@ -1,10 +1,8 @@
-import Windows10Portfolio from './components/Windows10Portfolio'
-import './App.css'
+import React from 'react';
+import Portfolio from './components/Portfolio';
 
 function App() {
-  return (
-    <Windows10Portfolio />
-  )
+  return <Portfolio />;
 }
 
-export default App
+export default App;

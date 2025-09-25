@@ -9,7 +9,7 @@ export const StaggeredMenu = ({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = '/src/assets/react.svg',
+  logoUrl = '',
   menuButtonColor = '#fff',
   openMenuButtonColor = '#fff',
   changeMenuColorOnOpen = true,

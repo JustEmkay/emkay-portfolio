@@ -131,7 +131,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
       band.current.geometry.setPoints(curve.getPoints(32));
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
-      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
+      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.70, z: ang.z });
     }
   });
 

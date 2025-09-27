@@ -15,6 +15,7 @@ import lanyardTexture from "../assets/lanyard/lanyard.png";
 const Portfolio = () => {
   const [showMainPage, setShowMainPage] = useState(false);
   const [selectedCompany, setSelectedCompany] = useState(null);
+  const [useOptimizedBackground, setUseOptimizedBackground] = useState(false);
   const blackScreenRef = useRef(null);
   const mainPageRef = useRef(null);
   const nameRef = useRef(null);
@@ -39,6 +40,28 @@ const Portfolio = () => {
       },
       "+=1"
     );
+  }, []);
+
+  useEffect(() => {
+    // Performance detection
+    const detectPerformance = () => {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      if (!gl) {
+        setUseOptimizedBackground(true);
+        return;
+      }
+
+      // Check for low-end device indicators
+      const isLowEnd = 
+        navigator.hardwareConcurrency <= 2 || // 2 or fewer CPU cores
+        navigator.deviceMemory <= 4 || // 4GB or less RAM
+        /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); // Mobile devices
+
+      setUseOptimizedBackground(isLowEnd);
+    };
+
+    detectPerformance();
   }, []);
 
   useEffect(() => {
@@ -257,16 +280,28 @@ const Portfolio = () => {
           <div className="flex items-center justify-center min-h-screen px-8 relative">
             {/* LiquidEther Background */}
             <div className="absolute inset-0 z-0">
-              <LiquidEther
-                colors={["#A2D5C6", "#CFFFE2", "#F6F6F6"]}
-                mouseForce={15}
-                cursorSize={80}
-                resolution={0.6}
-                autoDemo={true}
-                autoSpeed={0.3}
-                autoIntensity={1.5}
-                className="w-full h-full"
-              />
+              {useOptimizedBackground ? (
+                // Fallback gradient background for low-end devices
+                <div 
+                  className="w-full h-full"
+                  style={{
+                    background: 'linear-gradient(135deg, #A2D5C6 0%, #CFFFE2 50%, #F6F6F6 100%)',
+                    animation: 'gradientShift 8s ease-in-out infinite'
+                  }}
+                />
+              ) : (
+                <LiquidEther
+                  colors={["#A2D5C6", "#CFFFE2", "#F6F6F6"]}
+                  mouseForce={8}
+                  cursorSize={60}
+                  resolution={0.3}
+                  autoDemo={true}
+                  autoSpeed={0.2}
+                  autoIntensity={1.0}
+                  autoResumeDelay={2000}
+                  className="w-full h-full"
+                />
+              )}
             </div>
             
             <div className="text-center relative z-10">
@@ -586,6 +621,17 @@ const Portfolio = () => {
           </section>
         </div>
       )}
+      
+      <style jsx>{`
+        @keyframes gradientShift {
+          0%, 100% {
+            background: linear-gradient(135deg, #A2D5C6 0%, #CFFFE2 50%, #F6F6F6 100%);
+          }
+          50% {
+            background: linear-gradient(135deg, #CFFFE2 0%, #F6F6F6 50%, #A2D5C6 100%);
+          }
+        }
+      `}</style>
     </div>
   );
 };

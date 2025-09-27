@@ -177,7 +177,7 @@ const Timeline = () => {
         </div>
         
         {/* Timeline Container */}
-        <div className="relative overflow-x-auto pb-6 scrollbar-hide" ref={timelineRef}>
+        <div className="relative overflow-x-auto py-6 scrollbar-hide" ref={timelineRef}>
           {/* Scrollable Content */}
           <div className="flex items-center min-w-max px-4">
             {timelineData.map((item, index) => (

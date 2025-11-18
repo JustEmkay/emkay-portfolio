@@ -7,93 +7,84 @@ const Timeline = () => {
   const timelineData = [
     {
       id: 1,
-      date: "January 15, 2023",
-      phase: "Phase I",
-      title: "HTML & CSS",
-      description: "Started with web fundamentals, learned semantic HTML and responsive CSS design.",
-      skills: ["HTML5", "CSS3", "Responsive Design"],
-      techStack: ["HTML", "CSS"]
+      date: "2015",
+      phase: "Beginning",
+      title: "2D Animation Certification",
+      description: "Completed 2D animation certification in Micromedia Flash (Adobe Animate). Learned about 2D animation, simple flash animation, and HTML for the first time.",
+      skills: ["2D Animation", "Flash Animation", "HTML Basics"],
+      techStack: ["Adobe Animate", "HTML"]
     },
     {
       id: 2,
-      date: "March 30, 2023", 
-      phase: "Phase II",
-      title: "JavaScript Fundamentals",
-      description: "Mastered JavaScript ES6+ features, DOM manipulation, and async programming.",
-      skills: ["JavaScript", "DOM Manipulation", "Async/Await"],
-      techStack: ["JavaScript", "ES6+"]
+      date: "2016", 
+      phase: "Hardware Training",
+      title: "C-DIT Hardware Training",
+      description: "Completed C-DIT hardware training. Learned about PC hardware and how to build PCs.",
+      skills: ["PC Hardware", "Computer Assembly", "Hardware Troubleshooting"],
+      techStack: ["PC Hardware"]
     },
     {
       id: 3,
-      date: "June 15, 2023",
-      phase: "Phase III", 
-      title: "React Development",
-      description: "Built interactive UIs with React, learned hooks, state management, and component lifecycle.",
-      skills: ["React", "Component Architecture", "State Management"],
-      techStack: ["React", "JSX", "Hooks"]
+      date: "2018",
+      phase: "Programming Start", 
+      title: "Programming Fundamentals",
+      description: "Started learning about programming. Explored C, C++, HTML, SQL, and CSS.",
+      skills: ["Programming Fundamentals", "C Programming", "C++", "SQL", "CSS"],
+      techStack: ["C", "C++", "HTML", "SQL", "CSS"]
     },
     {
       id: 4,
-      date: "September 1, 2023",
-      phase: "Phase IV",
-      title: "Backend Development",
-      description: "Dove into server-side development with Node.js, Express, and database integration.",
-      skills: ["Backend Development", "API Design", "Database Management"],
-      techStack: ["Node.js", "Express", "MongoDB"]
+      date: "2020",
+      phase: "Web Development",
+      title: "Blender3D & E-commerce Project",
+      description: "Learned to use Blender3D as part of learning how to build a game. Built an e-commerce application for PC hardware and Custom PC (first web application project) using Laravel, MySQL, HTML, and Bootstrap CDN as a mini project. Learned about MVC architecture and CRUD operations.",
+      skills: ["3D Modeling", "Web Development", "MVC Architecture", "CRUD Operations", "E-commerce"],
+      techStack: ["Blender3D", "Laravel", "MySQL", "HTML", "Bootstrap"]
     },
     {
       id: 5,
-      date: "December 10, 2023",
-      phase: "Phase V", 
-      title: "Full Stack Integration",
-      description: "Connected frontend and backend, learned about authentication and deployment.",
-      skills: ["Full Stack Development", "Authentication", "Deployment"],
-      techStack: ["MERN Stack", "JWT", "Heroku"]
+      date: "2021",
+      phase: "Game Development", 
+      title: "Astro Mania - 2D Game",
+      description: "Worked on Unity + Blender + Aseprite for development of 2D game called Astro Mania as part of final year project of BSc Computer Science.",
+      skills: ["Game Development", "2D Game Design", "Unity Development", "3D Modeling"],
+      techStack: ["Unity", "Blender", "Aseprite"]
     },
     {
       id: 6,
-      date: "February 20, 2024",
-      phase: "Phase VI",
-      title: "Advanced Frontend",
-      description: "Explored advanced React patterns, TypeScript, and modern build tools.",
-      skills: ["TypeScript", "Advanced React", "Build Tools"],
-      techStack: ["TypeScript", "Vite", "Webpack"]
+      date: "2022",
+      phase: "Full Stack Development",
+      title: "Note Management Application",
+      description: "In first year of MCA, made a note management application using React + Node + Redis. Learned about TailwindCSS. First time using in-memory database.",
+      skills: ["Full Stack Development", "React Development", "Backend Development", "In-Memory Database"],
+      techStack: ["React", "Node.js", "Redis", "TailwindCSS"]
     },
     {
       id: 7,
-      date: "May 15, 2024",
-      phase: "Phase VII",
-      title: "Mobile Development",
-      description: "Started mobile development with React Native and learned cross-platform development.",
-      skills: ["Mobile Development", "Cross Platform", "UI/UX"],
-      techStack: ["React Native", "Expo", "Android Studio"]
+      date: "2023",
+      phase: "Machine Learning",
+      title: "ML Internship at iDatalytics",
+      description: "As part of final year ML project, joined internship at iDatalytics. Learned to use PowerBI, Flask, Streamlit, TensorFlow, Keras, OpenCV, and SQLite using Python. Learned and worked with ML concepts such as Data Collection, Data Preparation, Model Selection, Model Training, and Model Evaluation. Annotated and trained CNN object detection model and worked with COCO model for image recognition as part of final year main project.",
+      skills: ["Machine Learning", "Data Collection", "Data Preparation", "Model Training", "Model Evaluation", "CNN", "Object Detection", "Image Recognition"],
+      techStack: ["Python", "PowerBI", "Flask", "Streamlit", "TensorFlow", "Keras", "OpenCV", "SQLite"]
     },
     {
       id: 8,
-      date: "August 1, 2024",
-      phase: "Phase VIII",
-      title: "Cloud & DevOps",
-      description: "Learned cloud services, containerization, and CI/CD pipelines for scalable applications.",
-      skills: ["Cloud Computing", "DevOps", "Containerization"],
-      techStack: ["AWS", "Docker", "GitHub Actions"]
+      date: "2024",
+      phase: "AI & LLMs",
+      title: "LLM Chatbot Pipelines",
+      description: "Learned to use open source LLM with Streamlit, Ollama, and HuggingFace. Developed LLM chatbot pipelines.",
+      skills: ["LLM Integration", "Chatbot Development", "Open Source AI", "NLP Pipelines"],
+      techStack: ["Streamlit", "Ollama", "HuggingFace", "LLM"]
     },
     {
       id: 9,
-      date: "October 12, 2024",
-      phase: "Phase IX",
-      title: "AI & Machine Learning",
-      description: "Explored AI integration, machine learning basics, and modern AI tools for development.",
-      skills: ["AI Integration", "Machine Learning", "Prompt Engineering"],
-      techStack: ["Python", "TensorFlow", "OpenAI API"]
-    },
-    {
-      id: 10,
-      date: "December 25, 2024",
-      phase: "Phase X",
-      title: "Advanced Architectures",
-      description: "Mastered microservices, system design, and scalable application architectures.",
-      skills: ["System Design", "Microservices", "Performance Optimization"],
-      techStack: ["Kubernetes", "Redis", "GraphQL"]
+      date: "2025",
+      phase: "Professional AI/ML",
+      title: "Jr. AI/ML Developer at Triangle Software Solutions",
+      description: "Joined work at Triangle Software Solutions as Jr. AI/ML Developer. Learned to develop RAG-based chatbots using LangChain and VectorDB. Learned to write agentic pipelines using LangChain and Pydantic-AI. Learned basics of hosting and managing projects on AWS. Got proper understanding of REST API and WebSockets. Worked in backend of projects using FastAPI, PostgreSQL, Supabase. Started using tools such as Cursor.ai, Stitch, and MCPs.",
+      skills: ["RAG Development", "Agentic Pipelines", "AWS Hosting", "REST API", "WebSockets", "Backend Development", "Vector Databases"],
+      techStack: ["LangChain", "VectorDB", "Pydantic-AI", "AWS", "FastAPI", "PostgreSQL", "Supabase", "Cursor.ai", "Stitch", "MCPs"]
     }
   ];
 

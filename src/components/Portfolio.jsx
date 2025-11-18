@@ -171,7 +171,7 @@ const Portfolio = () => {
       technologies: ["Flask", "TensorFlow", "Streamlit", "OpenCV"],
       github: "https://github.com/JustEmkay/SpotDash",
       live: null,
-      image: "https://picsum.photos/900/900?random=1",
+      image: "https://github.com/JustEmkay/emkay-portfolio/blob/main/src/assets/pictures/psd.png",
     },
     {
       id: 2,
@@ -181,17 +181,17 @@ const Portfolio = () => {
       technologies: ["Python", "Ollama", "STT", "TTS", "Streamlit"],
       github: "https://github.com/JustEmkay/Experiment-VoiceAssistant-LLM",
       live: null,
-      image: "https://picsum.photos/900/900?random=2",
+      image: "https://github.com/JustEmkay/emkay-portfolio/blob/main/src/assets/pictures/eva.png",
     },
     {
       id: 3,
       title: "Project Management Application (Take-Home-Challenge)",
       description:
         "This project is a web-based application for managing projects and tasks (todos) as the part of Recruitment process of Hatio Innovations Private Limited . Users can create projects, manage todos, and export project summaries as GitHub gists or markdown files.",
-      technologies: ["FastAPI", "SQLite", "Streamlit", "GitHub"],
-      github: "https://github.com/JustEmkay/Hatio-Take-Home-Challenge",
+      technologies: ["Streamlit", "pydantic-ai", "OpenAI"],
+      github: "https://github.com/JustEmkay/m01",
       live: null,
-      image: "https://picsum.photos/900/900?random=3",
+      image: "https://github.com/JustEmkay/emkay-portfolio/blob/main/src/assets/pictures/at.png",
     },
   ];
 
@@ -582,11 +582,11 @@ const Portfolio = () => {
 
           <section
             id="projects"
-            className="min-h-screen"
+            className="min-h-screen h-screen"
             style={{ backgroundColor: "#A2D5C6" }}
           >
             
-              <InfiniteMenu items={infiniteMenuItems} />
+              <InfiniteMenu className="w-full h-full" items={infiniteMenuItems} />
             
           </section>
 

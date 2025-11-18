@@ -56,7 +56,7 @@ const Portfolio = () => {
       }
 
       // Check for low-end device indicators
-      const isLowEnd =
+      const isLowEnd = 
         navigator.hardwareConcurrency <= 2 || // 2 or fewer CPU cores
         navigator.deviceMemory <= 4 || // 4GB or less RAM
         /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -313,7 +313,7 @@ const Portfolio = () => {
             <div className="absolute inset-0 z-0">
               {useOptimizedBackground ? (
                 // Fallback gradient background for low-end devices
-                <div
+                <div 
                   className="w-full h-full"
                   style={{
                     background:
@@ -335,7 +335,7 @@ const Portfolio = () => {
                 />
               )}
             </div>
-
+            
             <div className="text-center relative z-10 px-4">
               <h1
                 ref={nameRef}
@@ -396,10 +396,10 @@ const Portfolio = () => {
                     </p>
                     <p className="font-medium">
                       My philosophy in development is simple:
-                      <br />
-                      <i className="font-bold">“let it exist first.”</i> Even if
-                      I’m new to a topic, I dive in, learn, and build something
-                      real. For me, every challenge is a chance to experiment,
+                    <br />
+                    <i className="font-bold">“let it exist first.”</i> Even if
+                    I’m new to a topic, I dive in, learn, and build something
+                    real. For me, every challenge is a chance to experiment,
                       explore, and create.
                     </p>
                   </ScrambledText>
@@ -792,7 +792,7 @@ const Portfolio = () => {
           </section> */}
         </div>
       )}
-
+      
       <style jsx>{`
         @keyframes gradientShift {
           0%,

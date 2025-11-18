@@ -9,7 +9,9 @@ import Timeline from "./Timeline";
 import InfiniteMenu from "./InfiniteMenu";
 import myProfile from "../assets/pictures/my-profile.png";
 import myProfileNoBg from "../assets/pictures/my-profile-bg-removed.png";
-import projectImage from "../assets/marek-piwnicki-unsplash.jpg";
+import projectImage from "../assets/pictures/psd.png";
+import projectImage2 from "../assets/pictures/eva.png";
+import projectImage3 from "../assets/pictures/at.png";
 import cardModel from "../assets/3D/untitled.glb";
 import lanyardTexture from "../assets/lanyard/lanyard.png";
 const Portfolio = () => {
@@ -171,7 +173,7 @@ const Portfolio = () => {
       technologies: ["Flask", "TensorFlow", "Streamlit", "OpenCV"],
       github: "https://github.com/JustEmkay/SpotDash",
       live: null,
-      image: "https://github.com/JustEmkay/emkay-portfolio/blob/main/src/assets/pictures/psd.png",
+      image: projectImage,
     },
     {
       id: 2,
@@ -181,17 +183,17 @@ const Portfolio = () => {
       technologies: ["Python", "Ollama", "STT", "TTS", "Streamlit"],
       github: "https://github.com/JustEmkay/Experiment-VoiceAssistant-LLM",
       live: null,
-      image: "https://github.com/JustEmkay/emkay-portfolio/blob/main/src/assets/pictures/eva.png",
+      image: projectImage2,
     },
     {
       id: 3,
-      title: "Project Management Application (Take-Home-Challenge)",
+      title: "Agentic Task Management System",
       description:
-        "This project is a web-based application for managing projects and tasks (todos) as the part of Recruitment process of Hatio Innovations Private Limited . Users can create projects, manage todos, and export project summaries as GitHub gists or markdown files.",
+        "This project is a agentic task management system for managing tasks and projects.",
       technologies: ["Streamlit", "pydantic-ai", "OpenAI"],
       github: "https://github.com/JustEmkay/m01",
       live: null,
-      image: "https://github.com/JustEmkay/emkay-portfolio/blob/main/src/assets/pictures/at.png",
+      image: projectImage3,
     },
   ];
 
@@ -277,7 +279,7 @@ const Portfolio = () => {
           style={{ opacity: 0, backgroundColor: "#000000" }}
         >
           {/* Main Content */}
-          <div className="flex items-center justify-center min-h-screen px-8 relative">
+          <div className="flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 relative">
             {/* LiquidEther Background */}
             <div className="absolute inset-0 z-0">
               {useOptimizedBackground ? (
@@ -304,16 +306,16 @@ const Portfolio = () => {
               )}
             </div>
             
-            <div className="text-center relative z-10">
+            <div className="text-center relative z-10 px-4">
               <h1
                 ref={nameRef}
-                className="text-8xl md:text-9xl font-black mb-8 tracking-tight"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 md:mb-8 tracking-tight break-words"
                 style={{ opacity: 0, color: "#CFFFE2" }}
               >
                 MANUകൃഷ്ണ T.M
               </h1>
               <p
-                className="text-xl max-w-2xl mx-auto"
+                className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-2"
                 style={{ color: "#F6F6F6" }}
               >
                 Junior AI/Backend Developer passionate about creating innovative
@@ -325,47 +327,40 @@ const Portfolio = () => {
           {/* Sections for smooth scrolling */}
           <section
             id="about"
-            className="min-h-screen flex items-center justify-center"
+            className="min-h-screen flex items-center justify-center py-12 sm:py-16"
             style={{ backgroundColor: "#A2D5C6" }}
           >
-            <div className="container mx-auto px-8">
-              <div className="flex items-center justify-center gap-12 max-w-6xl">
+            <div className="container mx-auto w-full px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto">
                 {/* Profile Picture - Left Side */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-full max-w-sm">
                   <img
                     src={myProfileNoBg}
                     alt="Manukrishna T.M Profile"
-                    className="w-80 h-80 object-cover"
+                    className="w-full h-auto max-h-80 object-contain"
                   />
                 </div>
 
                 {/* About Description - Right Side */}
-                <div className="flex-1 text-left">
+                <div className="flex-1 text-left w-full">
                   <ScrambledText
                     radius={150}
                     duration={1.5}
                     speed={0.3}
                     scrambleChars=".:!@#$%^&*()"
-                    className="text-lg md:text-xl leading-relaxed"
+                    className="text-base sm:text-lg lg:text-xl leading-relaxed space-y-4"
                     style={{ color: "#000000" }}
                   >
-                    Hello, I’m <i className="font-[1000]">Manukrishna T.M</i>, a <b>{new Date().getFullYear() - 2000}</b>-year-old developer based in Kochi. I currently work as a
-                    Backend Developer and ML/AI Engineer at a startup, where I
-                    mostly code in Python and build APIs using FastAPI and
-                    Flask.
-                    <br />
-                    I’m a naturally curious person — I love asking “why does
-                    this work like that?” and experimenting with different
-                    approaches. Along the way, I’ve tried, failed, and learned
-                    from many projects, which keeps fueling my growth as a
-                    developer.
-                    <br />
-                    <p>My philosophy in development is simple:
-                    <br />
-                    <i className="font-bold">“let it exist first.”</i> Even if
-                    I’m new to a topic, I dive in, learn, and build something
-                    real. For me, every challenge is a chance to experiment,
-                    explore, and create.</p>
+                    <p className="text-lg sm:text-xl font-semibold text-black">
+                      Hello, I’m <i className="font-[1000]">Manukrishna T.M</i>, a <b>{new Date().getFullYear() - 2000}</b>-year-old developer based in Kochi.</p>
+                      <p>I currently work as a Backend Developer and ML/AI Engineer at a startup, where I mostly code in Python and build APIs using FastAPI and Flask.
+                      I’m a naturally curious person — I love asking “why does this work like that?” and experimenting with different approaches. Along the way, I’ve tried, failed, and learned from many projects, which keeps fueling my growth as a developer.
+                    </p>
+                    <p className="font-medium">
+                      My philosophy in development is simple:
+                      <br />
+                      <i className="font-bold">“let it exist first.”</i> Even if I’m new to a topic, I dive in, learn, and build something real. For me, every challenge is a chance to experiment, explore, and create.
+                    </p>
                   </ScrambledText>
                 </div>
               </div>

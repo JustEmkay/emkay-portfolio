@@ -317,7 +317,7 @@ const Portfolio = () => {
                   className="w-full h-full"
                   style={{
                     background:
-                      "linear-gradient(135deg, #A2D5C6 0%, #CFFFE2 50%, #F6F6F6 100%)",
+                      "linear-gradient(135deg, #A2D5C6 80%, #CFFFE2 80%, #F6F6F6 100%)",
                     animation: "gradientShift 8s ease-in-out infinite",
                   }}
                 />

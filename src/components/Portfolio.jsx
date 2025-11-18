@@ -339,14 +339,13 @@ const Portfolio = () => {
             <div className="text-center relative z-10 px-4">
               <h1
                 ref={nameRef}
-                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 md:mb-8 tracking-tight break-words"
-                style={{ opacity: 0, color: "#CFFFE2" }}
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 md:mb-8 tracking-tight break-words text-black md:text-[#CFFFE2]"
+                style={{ opacity: 0 }}
               >
                 MANUകൃഷ്ണ T.M
               </h1>
               <p
-                className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-2"
-                style={{ color: "#F6F6F6" }}
+                className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-2 text-black md:text-[#F6F6F6]"
               >
                 Junior AI/Backend Developer passionate about creating innovative
                 solutions

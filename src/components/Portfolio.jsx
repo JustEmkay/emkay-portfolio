@@ -67,6 +67,25 @@ const Portfolio = () => {
   }, []);
 
   useEffect(() => {
+    // Mobile device detection and alert
+    const isMobileDevice = () => {
+      return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+             (window.innerWidth <= 768 && window.innerHeight <= 1024);
+    };
+
+    // Check if user has already dismissed the alert in this session
+    const hasSeenAlert = sessionStorage.getItem('mobileAlertDismissed');
+    
+    if (isMobileDevice() && !hasSeenAlert) {
+      // Small delay to let the page load first
+      setTimeout(() => {
+        alert("📱 Please switch to desktop mode, otherwise you'll understand why I'm a backend developer 😅");
+        sessionStorage.setItem('mobileAlertDismissed', 'true');
+      }, 1000);
+    }
+  }, []);
+
+  useEffect(() => {
     if (showMainPage) {
       // Main page entrance animation
       gsap.fromTo(
@@ -587,7 +606,7 @@ const Portfolio = () => {
 
           <section
             id="skills"
-            className="min-h-screen py-20"
+            className="min-h-screen h-screen py-20"
             style={{ backgroundColor: "#F6F6F6" }}
           >
             <Timeline />

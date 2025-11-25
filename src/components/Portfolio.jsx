@@ -195,6 +195,16 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: "Agentic Task Management System",
+      description:
+        "This project is a agentic task management system for managing tasks and projects.",
+      technologies: ["Streamlit", "pydantic-ai", "OpenAI"],
+      github: "https://justemkay-m01-home-jqk40t.streamlit.app/",
+      live: null,
+      image: projectImage3,
+    },
+    {
+      id: 2,
       title: "Parking Space detection System using CNN",
       description:
         "Centeralized Parking Space detection System using CNN and OpenCV",
@@ -204,7 +214,7 @@ const Portfolio = () => {
       image: projectImage,
     },
     {
-      id: 2,
+      id: 3,
       title: "Experiment-VoiceAssistant-LLM",
       description:
         "Done this project to experiment with LLM and Voice Assistant",
@@ -212,17 +222,7 @@ const Portfolio = () => {
       github: "https://github.com/JustEmkay/Experiment-VoiceAssistant-LLM",
       live: null,
       image: projectImage2,
-    },
-    {
-      id: 3,
-      title: "Agentic Task Management System",
-      description:
-        "This project is a agentic task management system for managing tasks and projects.",
-      technologies: ["Streamlit", "pydantic-ai", "OpenAI"],
-      github: "https://github.com/JustEmkay/m01",
-      live: null,
-      image: projectImage3,
-    },
+    }
   ];
 
   // Transform projects for InfiniteMenu
@@ -345,7 +345,7 @@ const Portfolio = () => {
                 MANUകൃഷ്ണ T.M
               </h1>
               <p
-                className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-2 text-black md:text-[#F6F6F6]"
+                className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-2 text-black md:text-[#CFFFE2]"
               >
                 Junior AI/Backend Developer passionate about creating innovative
                 solutions
